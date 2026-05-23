@@ -117,7 +117,7 @@ def challenge_setter_agent(github_client: GitHubClient, profile: Dict[str, Any])
     # Fork repository
     fork_data = github_client.fork_repository(
         source_owner='Gokul-404',
-        source_repo='lyzr',
+        source_repo='lyzr-ai',
         target_user=username
     )
     
