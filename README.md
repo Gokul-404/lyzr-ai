@@ -4,6 +4,20 @@
 
 GitAgent Interviewer is a multi-agent system that conducts real technical interviews by having candidates fix actual bugs under a 60-minute time constraint. The system evaluates code quality, problem-solving approach, and shipping ability through an objective rubric.
 
+## Problem & Solution
+
+**Challenge:** Traditional hiring is slow, biased, and doesn't measure shipping ability.
+
+**Solution:** Use GitHub as the interview platform. Real candidates, real code, real time pressure. The 4-agent system orchestrates the entire flow autonomously.
+
+## Why This Approach?
+
+- ✅ **Objective:** Score based on actual code, not vibes
+- ✅ **Scalable:** Run interviews 24/7 without human moderators
+- ✅ **Fair:** Same challenge, same time, same rubric for everyone
+- ✅ **Verifiable:** Full audit trail, commit history, PR timeline
+- ✅ **Fast:** 4 agents handle everything in ~5 minutes for demo mode
+
 ## How It Works
 
 The interview pipeline consists of 4 autonomous agents:
@@ -35,6 +49,26 @@ graph LR
     style E fill:#e8f5e9
     style F fill:#f1f8e9
 ```
+
+## Evaluation Rubric
+
+The Evaluator Agent scores submissions on a **100-point scale** across 5 dimensions:
+
+| Dimension | Points | What We Measure |
+|-----------|--------|-----------------|
+| **Correctness** | 0-30 | Did you fix all bugs? Any regressions? |
+| **Code Quality** | 0-25 | Readability, style, adherence to best practices |
+| **Edge Cases** | 0-20 | Null checks, boundary conditions, error handling |
+| **Approach** | 0-15 | Solution elegance, minimal changes, clear logic |
+| **Commit Clarity** | 0-10 | Meaningful messages, atomic commits |
+
+**Verdicts:**
+- **85+**: Strong Hire 🌟
+- **75-84**: Hire ✅
+- **60-74**: Consider 🤔
+- **<60**: No Hire ❌
+
+The Evaluator uses **Google Gemini AI** to analyze diffs and generate explanations, but includes a heuristic fallback if the API is unavailable.
 
 ## Setup
 
