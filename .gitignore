@@ -1,0 +1,45 @@
+## Build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+## Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+## IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+## Test outputs
+.pytest_cache/
+htmlcov/
+.coverage
+.tox/
+
+## Dependencies
+*.egg-info/
+dist/
+build/
+
+## Environment
+.env
+.env.local
+.env.*.local
+
+## Results and logs
+results/
+*.log
+
+## Temporary files
+*.tmp
+*.bak

@@ -1,0 +1,29 @@
+name: gitagent-interviewer
+version: 1.0.0
+model: google:gemini-1.5-flash
+description: Autonomous technical interviewer that evaluates engineers via GitHub PRs
+
+tools:
+  - github_api
+  - poll_pr
+  - scorer
+
+memory:
+  - candidates.md
+
+skills:
+  - profile
+  - challenge
+  - watchdog
+  - evaluator
+
+entrypoint: main.py
+
+# GitAgent/GitClaw compliance
+metadata:
+  author: Lyzr AI
+  license: MIT
+  repository: https://github.com/open-gitagent/gitagent-interviewer
+  standards:
+    - gitagent-1.0
+    - gitclaw-1.0
